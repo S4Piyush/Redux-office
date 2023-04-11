@@ -1,4 +1,5 @@
 import { LOGIN_DATA, TEMP_DATA } from "../type"
+
 export const editreducer = (state = {}, action) => {
     console.log('action', action)
     switch (action.type) {

@@ -6,18 +6,18 @@ import Home from './Redux/Home';
 
 function App() {
 
-  const dispatch = useDispatch();
-  const apiDataget = useSelector((ele) => ele)
-  console.log("apiDataget", apiDataget)
+  // const dispatch = useDispatch();
+  // const apiDataget = useSelector((ele) => ele)
+  // console.log("apiDataget", apiDataget)
 
-  const handleClick = () => {
-    dispatch(tempdata())
-  }
+  // const handleClick = () => {
+  //   dispatch(tempdata())
+  // }
 
   return (
     <div className="App">
       <Home />
-      <button onClick={() => handleClick()}>Submit</button>
+      {/* <button onClick={() => handleClick()}>Submit</button> */}
     </div>
   );
 }

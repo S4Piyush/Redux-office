@@ -1,9 +1,9 @@
 import axios from "axios"
-import { LOGIN_DATA, SINUP_DATA, TEMP_DATA } from "../type"
+import { LOGIN_DATA, TEMP_DATA } from "../type"
 
 export const tempdata = () => async (dispatch) => {
     try {
-        await axios.get('https://jsonplaceholder.typicode.com/users')
+        await axios.get('https://jsonplaceholder.typicode.com/comments')
             .then((res) => {
                 dispatch({
                     type: TEMP_DATA,
@@ -26,20 +26,4 @@ export const logindata = () => (dispatch) => {
         console.log('err', err)
 
     }
-}
-export const sinupData = () => async (dispatch) => {
-    try {
-        await axios.get('https://jsonplaceholder.typicode.com/users')
-            .then((res) => {
-                dispatch({
-                    type: SINUP_DATA,
-                    payload: res
-
-                })
-            })
-
-    } catch (err) {
-        console.log('err', err)
-    }
-
 }
