@@ -1,23 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
+import { tempdata } from './Redux/Action/Action';
+import { useDispatch, useSelector } from 'react-redux';
+import Home from './Redux/Home';
 
 function App() {
+
+  const dispatch = useDispatch();
+  const apiDataget = useSelector((ele) => ele)
+  console.log("apiDataget", apiDataget)
+
+  const handleClick = () => {
+    dispatch(tempdata())
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Home />
+      <button onClick={() => handleClick()}>Submit</button>
     </div>
   );
 }
